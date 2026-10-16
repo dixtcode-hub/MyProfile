@@ -1,0 +1,258 @@
+
+/* RESET DAN PENGATURAN DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6fc;
+    color: #202944;
+    line-height: 1.7;
+    transition: 0.3s;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, #315bea, #7957e8);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.header h1 {
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.header h1 span {
+    color: #ffd166;
+}
+
+.header p {
+    color: #e4e8ff;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+
+/* PROFIL */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    background-color: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(40, 55, 100, 0.08);
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #6559e8;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.label {
+    color: #6559e8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.profile-info h2 {
+    font-size: 34px;
+    line-height: 1.4;
+}
+
+.profile-info h3 {
+    color: #6559e8;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.description {
+    color: #626b80;
+    margin-bottom: 20px;
+}
+
+/* TOMBOL */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 9px;
+    background-color: #6559e8;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn-secondary {
+    background-color: #e9eaff;
+    color: #5145c9;
+}
+
+/* BAGIAN HOBI */
+.skills {
+    margin-top: 45px;
+}
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    font-size: 27px;
+    margin: 5px 0;
+}
+
+.section-heading > p:last-child {
+    color: #737c90;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #e9ebf5;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(40, 55, 100, 0.08);
+}
+
+.card-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #737c90;
+    font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    color: #858da0;
+    font-size: 13px;
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+/* TEMA GELAP */
+body.dark-theme {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+.dark-theme .profile,
+.dark-theme .card {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+.dark-theme .description,
+.dark-theme .card p,
+.dark-theme .section-heading > p:last-child {
+    color: #c0c8d6;
+}
+
+.dark-theme .btn-secondary {
+    background-color: #374151;
+    color: #ffffff;
+}
+
+.dark-theme footer {
+    color: #aab3c2;
+}
+
+/* RESPONSIVE UNTUK HP */
+@media screen and (max-width: 767px) {
+    .header {
+        padding: 25px 15px;
+    }
+
+    .container {
+        width: 92%;
+        margin-top: 22px;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 20px;
+        gap: 20px;
+    }
+
+    .avatar {
+        width: 120px;
+        height: 120px;
+        min-width: 120px;
+        font-size: 50px;
+    }
+
+    .profile-info h2 {
+        font-size: 28px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+}
+
+/* RESPONSIVE UNTUK LAPTOP DAN TABLET LEBAR */
+@media screen and (min-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
